@@ -23,16 +23,16 @@ int		findfreepos(t_tetriminolist *tlist, int index, char **grid, int size)
 		j = -1;
 		while (++j < size)
 		{
-			if (checkblock(&tlist->list[index], grid,\
-			(i * size + j), size) == 0)
+			if (checkblock(&tlist->list[index], grid\
+			,(i * size + j), size) == 0)
 			{
-				placeblock(&tlist->list[index],\
-				i * size + j, grid, size);
+				placeblock(&tlist->list[index]\
+				,i * size + j, grid, size);
 				if (index + 1 == tlist->size)
 					return (0);
 				if (findfreepos(tlist, index + 1, grid, size) == -1)
-					removeblock(&tlist->list[index],\
-					i * size + j, grid, size);
+					removeblock(&tlist->list[index]\
+					,i * size + j, grid, size);
 				else
 					return (0);
 			}

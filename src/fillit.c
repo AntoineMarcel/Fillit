@@ -6,7 +6,7 @@
 /*   By: abelkhay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/18 15:37:58 by abelkhay          #+#    #+#             */
-/*   Updated: 2019/03/19 15:33:14 by abelkhay         ###   ########.fr       */
+/*   Updated: 2019/05/20 21:07:23 by amarcel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	ft_error(void)
 	exit(1);
 }
 
-int	count_size(char *filename)
+int		count_size(char *filename)
 {
-	int taille;
+	int		taille;
 	int		fd;
 	int		ret;
 	char	buffer[22];

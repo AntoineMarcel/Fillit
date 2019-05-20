@@ -6,7 +6,7 @@
 /*   By: abelkhay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/18 15:39:13 by abelkhay          #+#    #+#             */
-/*   Updated: 2019/03/18 18:34:49 by abelkhay         ###   ########.fr       */
+/*   Updated: 2019/05/20 21:08:09 by amarcel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	verifyconnect(char *buf, int ret)
 			if (i + 1 < ret && buf[i + 1] == '#')
 				countconnect++;
 			if (i + 5 < ret && buf[i + 5] == '#')
-			 	countconnect++;
+				countconnect++;
 			if (i >= 5 && buf[i - 5] == '#')
 				countconnect++;
 		}
