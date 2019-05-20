@@ -13,7 +13,7 @@
 #	ifndef VERIFY_BLOCK_H
 #	define VERIFY_BLOCK_H
 
-int	verify_block(char buf[22]);
-int verifyconnect(char buf[22]);
+int	verify_block(char buf[22], int ret);
+int verifyconnect(char buf[22], int ret);
 
 #	endif

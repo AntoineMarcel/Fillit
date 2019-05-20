@@ -19,6 +19,7 @@ int	read_file(char *filename, char **str_tetri, int *tetri_counter)
 	char	buffer[22];
 	int		temp;
 
+	temp = 0;
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (-1);
@@ -29,7 +30,7 @@ int	read_file(char *filename, char **str_tetri, int *tetri_counter)
 		buffer[ret] = '\0';
 		if (!(str_tetri[*tetri_counter] = ft_strdup(buffer)))
 			return (-1);
-		if (verify_block(str_tetri[*tetri_counter]) == -1)
+		if (verify_block(str_tetri[*tetri_counter], ret) == -1)
 			return (-1);
 		(*tetri_counter)++;
 		if (*tetri_counter > 26)
@@ -40,3 +41,4 @@ int	read_file(char *filename, char **str_tetri, int *tetri_counter)
 		return (-1);
 	return (0);
 }
+
